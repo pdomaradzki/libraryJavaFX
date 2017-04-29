@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Logowanie">
+                    <content>
+                        <GridPane alignment="TOP_CENTER">
+                            <columnConstraints>
+                                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="304.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="230.0" minHeight="10.0" prefHeight="230.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="126.0" minHeight="10.0" prefHeight="73.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="264.0" text="Logowanie" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                    <font>
+                                        <Font name="Roboto Regular" size="37.0" />
+                                    </font>
+                                </Label>
+                                <VBox alignment="CENTER" prefHeight="159.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <children>
+                                        <TextField fx:id="loginText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="386.0" promptText="Login">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" />
+                                            </VBox.margin>
+                                        </TextField>
+                                        <PasswordField fx:id="passwordText" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="386.0" promptText="Hasło" />
+                                    </children>
+                                </VBox>
+                                <Button alignment="CENTER" contentDisplay="RIGHT" mnemonicParsing="false" onMouseClicked="#openDialog" prefHeight="45.0" prefWidth="96.0" text="Zaloguj" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                    <GridPane.margin>
+                                        <Insets left="290.0" />
+                                    </GridPane.margin>
+                                </Button>
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+                <Tab text="Rejestracja">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="118.0" minHeight="0.0" prefHeight="95.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="248.0" minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="127.0" minHeight="10.0" prefHeight="127.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Rejestracja" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                    <font>
+                                        <Font name="Roboto Regular" size="36.0" />
+                                    </font>
+                                </Label>
+                                <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                    <children>
+                                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0">
+                                            <children>
+                                                <Label text="Login: ">
+                                                    <HBox.margin>
+                                                        <Insets right="30.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font size="24.0" />
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="registrationLogin" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0">
+                                            <children>
+                                                <Label text="Hasło:">
+                                                    <HBox.margin>
+                                                        <Insets right="30.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font size="24.0" />
+                                                    </font></Label>
+                                                <PasswordField fx:id="registrationPassword" />
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0">
+                                            <children>
+                                                <Label text="Powtórz hasło:">
+                                                    <HBox.margin>
+                                                        <Insets right="30.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font size="24.0" />
+                                                    </font></Label>
+                                                <PasswordField fx:id="registrationRetypePassword" />
+                                            </children>
+                                        </HBox>
+                              <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0">
+                                 <children>
+                                    <Label text="Nazwisko:">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="lastName" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0">
+                                 <children>
+                                    <Label text="Nr tel.">
+                                       <font>
+                                          <Font size="24.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="30.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="phoneNumber" />
+                                 </children>
+                              </HBox>
+                                    </children>
+                                </VBox>
+                                <Button contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#signUp" prefHeight="47.0" prefWidth="99.0" text="Zarejestruj" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                            </children>
+                        </GridPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
